@@ -3,4 +3,5 @@
     <string name="greeting">Hello</string>
     <string name="title">Title</string>
     <string name="switch_language">Switch Language</string>
+    <string name="section">Section</string>
 </resources>

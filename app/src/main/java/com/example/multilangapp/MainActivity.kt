@@ -56,7 +56,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-	LazyColumn(Modifier.padding(16.dp)) {
+	LazyColumn(
+		Modifier.padding(16.dp)
+					.fillMaxSize()
+	) {
 		item {
 			Text(
 				text = stringResource(id = R.string.title),
@@ -66,12 +69,12 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 			)
 			HorizontalDivider(Modifier.fillMaxWidth())
 		}
-		items(10){
+		items(4){
 			Text(
 				text = name,
 				modifier = modifier,
-				fontSize = 22.sp,
-				fontWeight = FontWeight.Bold
+				fontSize = 26.sp,
+				fontWeight = FontWeight.SemiBold
 			)
 		}
 		item{
@@ -99,10 +102,16 @@ fun LanguageSwitcher(){
 			Text("Switch to Spanish")
 		}
 		Button(onClick = {
-			setLanguage(context, "fa")
+			setLanguage(context, "fr")
 			(context as? Activity)?.recreate()
 		}) {
-			Text("Switch to Farsi")
+			Text("Switch to French")
+		}
+		Button(onClick = {
+			setLanguage(context, "pt")
+			(context as? Activity)?.recreate()
+		}) {
+			Text("Switch to Portuguese")
 		}
 	}
 }

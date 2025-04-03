@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MultiLangApp</string>
+    <string name="greeting">Saludo</string>
+    <string name="title">Título</string>
+    <string name="switch_language">Cambiar Idioma</string>
+    <string name="section">Sección</string>
+</resources>
